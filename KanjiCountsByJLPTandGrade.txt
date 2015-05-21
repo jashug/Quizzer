@@ -1,0 +1,31 @@
+Freq: 1-2500
+
+Table of kanji counts:
+Columns are JLPT levels -1, 1, 2, 3, 4
+Rows are grade levels 1 - 10
+  0   0   8  15  57 
+  0   5  38  74  43 
+  0   8 122  67   3 
+  0  24 156  20   0 
+  0  34 149   2   0 
+  0  73 105   3   0 
+  0   0   0   0   0 
+157 812 161*  0   0 
+398 251   0   0   0 
+212   0   0   0   0 
+
+Cumulative Totals:
+JLPT 4: 103
+JLPT 3: 284
+JLPT 2: 1023
+JLPT 1: 2230
+Grade 1: 80
+Grade 2: 240
+Grade 3: 440
+Grade 4: 640
+Grade 5: 825
+Grade 6: 1006 - Kyouiku
+Jouyou: 2136
+Total: 2997
+Jinmeiyou without meanings: 47
+Total usable: 2950

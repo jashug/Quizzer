@@ -1,0 +1,65 @@
+Total: 172042
+0K,1R,1S =  17791
+1K,1R,1S = 104330
++K,1R,1S =  14561
+0K,+R,1S =  13089
+1K,+R,1S =   6034
++K,+R,1S =   3252
+0K,1R,+S =   1374
+1K,1R,+S =   5944
++K,1R,+S =   3143
+0K,+R,+S =    686
+1K,+R,+S =   1015
++K,+R,+S =    823
+
+Freq: 29670
+0K,1R,1S =   2774
+1K,1R,1S =  15651
++K,1R,1S =   3047
+0K,+R,1S =   1122
+1K,+R,1S =    919
++K,+R,1S =    499
+0K,1R,+S =    642
+1K,1R,+S =   2501
++K,1R,+S =   1403
+0K,+R,+S =    272
+1K,+R,+S =    427
++K,+R,+S =    313
+
+pairs if no stags or srb in stagrs
+triples if (no stagrs or read in stagrs) and (...stagks...)
+
+generate triples, pairs
+with triples,
+generate all k->[s], k->[r]
+for each r, if k,r gives different [s], do (k,r)->[s]
+for each s, if k,s gives different [r], do (k,s)->[r]
+with pairs,
+generate all r->[s]
+
+for pairs,
+(ke_pri nonexistant)
+this reading means? (accept any gloss)
+given set of re_pri, order by max element
+
+gather by reb, list pairs, answers
+
+for triples:
+this kanji means? (accept any gloss)
+this kanji is read? (accept any reading)
+*this kanji read like this means? (accept valid glosses)
+*this kanji in this sense is read? (accept valid glosses)
+given set of ke_pri, re_pri, order by max ke_pri, max re_pri
+order by ke_pri first, then re_pri
+order subquestions by re_pri (max re_pri for k,s->[r])
+gather by k, (k,s), (k,r)
+track answers as well as triples
+
+qids use urlsafe_base64 encoding of UTF-8 form of string
+
+sort key: (max primary pri, primary key)
+for triples, add order id 0-3
+for KRtoS, add (max re_pri, reb)
+for KStoR, add (max re_pri, sense)
+#pairs: 57943
+#triples: 205971

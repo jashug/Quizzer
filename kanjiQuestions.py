@@ -84,9 +84,11 @@ def addKanjiToEnglish(qs):
         tag = "kanji%d"%uord(q.literal)
         assert tag not in qs
         qs[tag] = q
-        if q.grade <= 8:
-            rank[tag] = (q.grade, -q.jlpt, q.strokes, q.freq)
-            ordered.append(tag)
+        rank[tag] = (q.grade, -q.jlpt, q.strokes, q.freq)
+        ordered.append(tag)
     ordered.sort(key=lambda tag:rank[tag])
     return ordered
 
+def addJLPTKanjiToEnglish(qs):
+    ordered = addKanjiToEnglish(qs)
+    return [q for q in ordered if qs[q].grade <= 8]

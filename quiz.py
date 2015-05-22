@@ -1,14 +1,16 @@
-from kanjiQuestions import addKanjiToEnglish as addKanjiSet
+from kanjiQuestions import addJLPTKanjiToEnglish as addKanjiSet
 from vocabQuestions import addVocabSet, addVocabSetShortcut
+from japQuestions import addJapaneseQuestions
 from quizBasics import SpacedQuestionSupplier as SpacedQs
 from quizBasics import ReverseSpacedQuestionSupplier as ReverseQs
 
 qs = {}
-orderedKanji = addKanjiSet(qs)
-orderedVocab = addVocabSetShortcut("vocabPickle.pkl", qs)
-keyVocabCards = [q for q in orderedVocab if (q.startswith('vocabKS.') or
-                                             q.startswith('vocabRS'))]
-questionSupplier = ReverseQs(qs, orderedVocab, "records.txt")
+#orderedKanji = addKanjiSet(qs)
+#orderedVocab = addVocabSetShortcut("vocabPickle.pkl", qs)
+#keyVocabCards = [q for q in orderedVocab if (q.startswith('vocabKS.') or
+#                                             q.startswith('vocabRS'))]
+ordered = addJapaneseQuestions(qs, "vocabPickle.pkl")
+questionSupplier = ReverseQs(qs, ordered, "records.txt")
 def counts():
     print "Kanji learned: %d / %d"%(questionSupplier.countCardSet(orderedKanji),
                                     len(orderedKanji))
@@ -19,9 +21,9 @@ def counts():
            len(orderedVocab))
 
 def main():
-    counts()
+    #counts()
     with questionSupplier:
         questionSupplier.askManyQuestions()
-    counts()
+    #counts()
 
 main()

@@ -64,7 +64,7 @@ def addJapaneseQuestions(qs, vocabCache=None):
         assert question.literal not in kanjiIndex
         kanjiIndex[question.literal] = i
         assert q not in rank
-        rank[q] = (chunk[question.literal], i, -1)
+        rank[q] = (chunk[question.literal], i, len(question.literal), -1)
         ordered.append(q)
 
     #global missing
@@ -89,6 +89,7 @@ def addJapaneseQuestions(qs, vocabCache=None):
         assert q not in rank
         rank[q] = (getPriNF(question),
                    max(-1,-1, *(kanjiIndex[kanji] for kanji in kanjiSet(keb))),
+                   len(keb),
                    i)
         ordered.append(q)
 

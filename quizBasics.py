@@ -104,6 +104,7 @@ class QuestionSupplier(object):
         self.stats()
         raw_input("Press enter to begin.")
         start = time.time()
+        initalCardCount = self.cardsSeen()
         total = 0
         wrong = 0
         while True:
@@ -120,6 +121,7 @@ class QuestionSupplier(object):
               (total, dt // 60, dt % 60)
         print "That is %.3f seconds per problem, or %.3f problems per minute" %\
               (dt / total, 60 * total / dt)
+        print "You learned %d new cards."%(self.cardsSeen() - initalCardCount)
 
     def stats(self):
         print "You have learned %d cards." % self.cardsSeen()

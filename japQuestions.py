@@ -84,7 +84,8 @@ def addJapaneseQuestions(qs, vocabCache=None):
         if isinstance(question, VocabKtoSQuestion) and keb in kanjiIndex:
             ques2 = qs[orderedKanji[kanjiIndex[keb]]]
             ques2.answers += list(question.answers-set(ques2.answers))
-            #question.answers.update(ques2.answers)
+            question.answers.update(ques2.answers)
+            del qs[q]
             continue
         assert q not in rank
         rank[q] = (getPriNF(question),

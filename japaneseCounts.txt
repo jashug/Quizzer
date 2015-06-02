@@ -1,0 +1,196 @@
+Chunk 1:
+Kanji: 432
+Vocab Questions: 956
+Total: 1388
+Chunk 2:
+Kanji: 257
+Vocab Questions: 963
+Total: 2608
+Chunk 3:
+Kanji: 171
+Vocab Questions: 949
+Total: 3728
+Chunk 4:
+Kanji: 151
+Vocab Questions: 964
+Total: 4843
+Chunk 5:
+Kanji: 115
+Vocab Questions: 954
+Total: 5912
+Chunk 6:
+Kanji: 100
+Vocab Questions: 972
+Total: 6984
+Chunk 7:
+Kanji: 96
+Vocab Questions: 941
+Total: 8021
+Chunk 8:
+Kanji: 70
+Vocab Questions: 952
+Total: 9043
+Chunk 9:
+Kanji: 78
+Vocab Questions: 950
+Total: 10071
+Chunk 10:
+Kanji: 61
+Vocab Questions: 948
+Total: 11080
+Chunk 11:
+Kanji: 64
+Vocab Questions: 946
+Total: 12090
+Chunk 12:
+Kanji: 45
+Vocab Questions: 972
+Total: 13107
+Chunk 13:
+Kanji: 47
+Vocab Questions: 954
+Total: 14108
+Chunk 14:
+Kanji: 35
+Vocab Questions: 965
+Total: 15108
+Chunk 15:
+Kanji: 34
+Vocab Questions: 972
+Total: 16114
+Chunk 16:
+Kanji: 36
+Vocab Questions: 963
+Total: 17113
+Chunk 17:
+Kanji: 22
+Vocab Questions: 955
+Total: 18090
+Chunk 18:
+Kanji: 26
+Vocab Questions: 949
+Total: 19065
+Chunk 19:
+Kanji: 33
+Vocab Questions: 963
+Total: 20061
+Chunk 20:
+Kanji: 23
+Vocab Questions: 951
+Total: 21035
+Chunk 21:
+Kanji: 16
+Vocab Questions: 949
+Total: 22000
+Chunk 22:
+Kanji: 26
+Vocab Questions: 947
+Total: 22973
+Chunk 23:
+Kanji: 31
+Vocab Questions: 951
+Total: 23955
+Chunk 24:
+Kanji: 22
+Vocab Questions: 953
+Total: 24930
+Chunk 25:
+Kanji: 25
+Vocab Questions: 963
+Total: 25918
+Chunk 26:
+Kanji: 19
+Vocab Questions: 953
+Total: 26890
+Chunk 27:
+Kanji: 22
+Vocab Questions: 942
+Total: 27854
+Chunk 28:
+Kanji: 27
+Vocab Questions: 954
+Total: 28835
+Chunk 29:
+Kanji: 17
+Vocab Questions: 944
+Total: 29796
+Chunk 30:
+Kanji: 22
+Vocab Questions: 945
+Total: 30763
+Chunk 31:
+Kanji: 17
+Vocab Questions: 941
+Total: 31721
+Chunk 32:
+Kanji: 22
+Vocab Questions: 932
+Total: 32675
+Chunk 33:
+Kanji: 22
+Vocab Questions: 918
+Total: 33615
+Chunk 34:
+Kanji: 24
+Vocab Questions: 922
+Total: 34561
+Chunk 35:
+Kanji: 31
+Vocab Questions: 939
+Total: 35531
+Chunk 36:
+Kanji: 28
+Vocab Questions: 924
+Total: 36483
+Chunk 37:
+Kanji: 27
+Vocab Questions: 935
+Total: 37445
+Chunk 38:
+Kanji: 34
+Vocab Questions: 928
+Total: 38407
+Chunk 39:
+Kanji: 21
+Vocab Questions: 918
+Total: 39346
+Chunk 40:
+Kanji: 18
+Vocab Questions: 919
+Total: 40283
+Chunk 41:
+Kanji: 26
+Vocab Questions: 902
+Total: 41211
+Chunk 42:
+Kanji: 27
+Vocab Questions: 909
+Total: 42147
+Chunk 43:
+Kanji: 28
+Vocab Questions: 906
+Total: 43081
+Chunk 44:
+Kanji: 24
+Vocab Questions: 898
+Total: 44003
+Chunk 45:
+Kanji: 19
+Vocab Questions: 930
+Total: 44952
+Chunk 46:
+Kanji: 28
+Vocab Questions: 904
+Total: 45884
+Chunk 47:
+Kanji: 14
+Vocab Questions: 893
+Total: 46791
+Chunk 48:
+Kanji: 0
+Vocab Questions: 36
+Total: 46827
+Chunk 49:
+Kanji: 7814
+Vocab Questions: 10464
+Total: 65105

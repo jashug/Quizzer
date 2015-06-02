@@ -51,9 +51,6 @@ def addJapaneseQuestions(qs, vocabCache=None):
         for kanji in kanjiSet(getKeb(question)):
             if pri < chunk[kanji]: chunk[kanji] = pri
 
-    #print "Chunk 1 Kanji: %d"%len([k for k in chunk if chunk[k] == 1])
-    #print ''.join([k for k in chunk if chunk[k] == 1])
-
     # generate rank data (chunk, kanjiI, vocabI)
     rank = {}
     ordered = []
@@ -94,4 +91,21 @@ def addJapaneseQuestions(qs, vocabCache=None):
                    i)
         ordered.append(q)
 
-    return sorted(ordered, key=lambda q:rank[q])
+##    tot = 0
+##    for i in range(1, 50):
+##        ks = [k for k in chunk if chunk[k] == i]# and kanjiIndex[k] >= 1006]
+##        vqs = [vq for vq in orderedVocab if vq in rank and rank[vq][0] == i]
+##        ks.sort(key = lambda k:kanjiIndex[k])
+##        vqs.sort(key = lambda vq:rank[vq])
+##        print "Chunk %d:"%i
+##        print "Kanji: %d"%len(ks)
+##        print "Vocab Questions: %d"%len(vqs)
+##        tot += len(ks) + len(vqs)
+##        print "Total: %d"%tot
+##        #print ''.join(ks)
+        
+
+    return (sorted(ordered, key=lambda q:rank[q]),
+            [q for q in orderedKanji if q in qs],
+            [q for q in orderedVocab if q in qs],
+            [[q for q in rank if rank[q][0] == i] for i in range(50)])

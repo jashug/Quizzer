@@ -1,4 +1,4 @@
-import cPickle as pickle
+import pickle as pickle
 from vocabQuestions import addVocabSet
 qs = {}
 ordered = addVocabSet(qs)

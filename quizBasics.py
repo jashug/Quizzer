@@ -4,11 +4,15 @@ import base64
 
 def uid(s):
     """Generate a unique ASCII string for a unicode string."""
-    return base64.urlsafe_b64encode(s.encode("UTF-8"))
+    return base64.urlsafe_b64encode(s.encode('utf-8')).decode('ascii')
 
 def uidInv(s):
     """uidInv(uid(s)) == s"""
-    return base64.urlsafe_b64decode(s).decode("UTF-8")
+    try:
+        return base64.urlsafe_b64decode(s.encode('ascii')).decode('utf-8')
+    except:
+        print(repr(s))
+        raise
 
 class Record(object):
     def __init__(self, tag, answer, time, dt, grade):
@@ -76,33 +80,33 @@ class QuestionSupplier(object):
     def askOneQuestion(self):
         q = self.nextQuestion()
         if q is None:
-            print "NO QUESTION"
+            print("NO QUESTION")
             return
         if q not in self.qs:
-            print "NOT RECOGNIZED: %s"%str(q)
+            print("NOT RECOGNIZED: %s"%str(q))
             return
         if q not in self.seen:
-            print "New Question:"
+            print("New Question:")
             self.qs[q].body()
         self.qs[q].ask()
         start = time.time()
-        ans = raw_input()
+        ans = input()
         end = time.time()
         grade = self.qs[q].check(ans)
         if grade:
-            print "Correct!"
+            print("Correct!")
         else:
-            print "Incorrect!"
-            print "Remember:"
+            print("Incorrect!")
+            print("Remember:")
             self.qs[q].body()
         self.record(Record(q, ans, start, end - start, grade))
         return grade
 
     def askManyQuestions(self):
         assert self.outFile is not None
-        print "Welcome to the Quiz program!"
+        print("Welcome to the Quiz program!")
         self.stats()
-        raw_input("Press enter to begin.")
+        input("Press enter to begin.")
         start = time.time()
         initalCardCount = self.cardsSeen()
         total = 0
@@ -111,20 +115,20 @@ class QuestionSupplier(object):
             grade = self.askOneQuestion()
             total += 1
             if not grade: wrong += 1
-            if raw_input("Continue? (non-empty to stop): "):
+            if input("Continue? (non-empty to stop): "):
                 break
         end = time.time()
         dt = end - start
         self.stats()
-        print "You missed %d problems." % wrong
-        print "You answered %d problems in %d minutes %d seconds." %\
-              (total, dt // 60, dt % 60)
-        print "That is %.3f seconds per problem, or %.3f problems per minute" %\
-              (dt / total, 60 * total / dt)
-        print "You learned %d new cards."%(self.cardsSeen() - initalCardCount)
+        print("You missed %d problems." % wrong)
+        print("You answered %d problems in %d minutes %d seconds." %\
+              (total, dt // 60, dt % 60))
+        print("That is %.3f seconds per problem, or %.3f problems per minute" %\
+              (dt / total, 60 * total / dt))
+        print("You learned %d new cards."%(self.cardsSeen() - initalCardCount))
 
     def stats(self):
-        print "You have learned %d cards." % self.cardsSeen()
+        print("You have learned %d cards." % self.cardsSeen())
 
     def countCardSet(self, cards):
         return len([c for c in cards if c in self.seen])
@@ -188,7 +192,7 @@ class ReverseSpacedQuestionSupplier(SpacedQuestionSupplier):
     def stats(self):
         SpacedQuestionSupplier.stats(self)
         self.nextQuestion()
-        print "Review queue: %d" % len(self.revQueue)
+        print("Review queue: %d" % len(self.revQueue))
 ##        if len(self.queue):
 ##            print "Forwards queue: %d" % len(self.queue)
 ##            print "Next expiring: %.3f" % self.queue.peek()[0]

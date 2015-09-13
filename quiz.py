@@ -12,13 +12,13 @@ keyVocabCards = [q for q in vocab if (q.startswith('vocabKS.') or
                                       q.startswith('vocabRS'))]
 questionSupplier = ReverseQs(qs, ordered, "records.txt")
 def counts():
-    print "Kanji learned: %d / %d"%(questionSupplier.countCardSet(kanji),
-                                    len(kanji))
-    print "Vocab learned: %d / %d (%d / %d cards)"%\
+    print("Kanji learned: %d / %d"%(questionSupplier.countCardSet(kanji),
+                                    len(kanji)))
+    print("Vocab learned: %d / %d (%d / %d cards)"%\
           (questionSupplier.countCardSet(keyVocabCards),
            len(keyVocabCards),
            questionSupplier.countCardSet(vocab),
-           len(vocab))
+           len(vocab)))
     for i in range(len(chunks)):
         chunk = chunks[i]
         cur, tot = questionSupplier.countCardSet(chunk), len(chunk)
@@ -27,16 +27,16 @@ def counts():
             chunkVocab = [q for q in chunk if q.startswith('vocab')]
             chunkKeyVocab = [q for q in chunk if (q.startswith('vocabKS.') or
                                                   q.startswith('vocabRS'))]
-            print "Current chunk: %d"%i
-            print "Cards in chunk: %d / %d"%(cur, tot)
-            print "Kanji in chunk: %d / %d"%(
+            print("Current chunk: %d"%i)
+            print("Cards in chunk: %d / %d"%(cur, tot))
+            print("Kanji in chunk: %d / %d"%(
                 questionSupplier.countCardSet(chunkKanji),
-                len(chunkKanji))
-            print "Vocab in chunk: %d / %d (%d / %d cards)"%(
+                len(chunkKanji)))
+            print("Vocab in chunk: %d / %d (%d / %d cards)"%(
                 questionSupplier.countCardSet(chunkKeyVocab),
                 len(chunkKeyVocab),
                 questionSupplier.countCardSet(chunkVocab),
-                len(chunkVocab))
+                len(chunkVocab)))
             break
 
 def main():
@@ -45,4 +45,4 @@ def main():
         questionSupplier.askManyQuestions()
     counts()
 
-main()
+print("Ready")
